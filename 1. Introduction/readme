@@ -1,8 +1,0 @@
-The notes of introduction are as follows.
-What we will do?
- Please review the pdf file in titled "Introduction to Signals and Systems".
- 
-How does it work?   
-1. Install Anaconda to setup a developing environment for Python
-2. Run Jupyter in Anaconda 
-3. Run Introdcution.ipynb in Jupter
