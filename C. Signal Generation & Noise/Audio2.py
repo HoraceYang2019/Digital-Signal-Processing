@@ -161,11 +161,12 @@ if __name__ == '__main__':
     gen_data = play_key(stream, duration, key, mode='Fade_Out') # generate background voice
     plt.plot(gen_data) # length of gen_data: 441000
     
-#    reording(p, stream)
+    reording(p, stream)
     time, rec_data = get_audio(play=True) # record front voice
     # length of rec_data: 441000
     plot_audio(time, rec_data)
     
+    print(f'gen_data: {gen_data.shape}, rec_data: {rec_data.shape}')
     # the lengths of two data are the same 
     com_data = gen_data[:len(rec_data)]*100000000 + rec_data*1 
     

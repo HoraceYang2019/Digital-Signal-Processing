@@ -147,11 +147,12 @@ if __name__ == '__main__':
     reording(p, stream)
     time, rec_data = get_audio(play=True) # record front voice
     # length of rec_data: 440320
-    plot_audio(time, rec_data)
+ #   plot_audio(time, rec_data)
     
-    com_data = gen_data + rec_data #?
-    com_data = gen_data[:len(rec_data)]*200000 + rec_data*1 # cut the data
-    plot_audio(time, com_data)
+ #   com_data = gen_data + rec_data #?
+ #   com_data = gen_data[:len(rec_data)]*200000 + rec_data*1 # cut the data
+ #   plot_audio(time, com_data)
 
-    play_audio(stream, bytes(np.array(com_data, np.int32))) 
+ #   play_audio(stream, bytes(np.array(rec_data, np.int32))) 
+    print(f'gen_data: {gen_data.shape}, rec_data: {rec_data.shape}')
     close_Audio(p, stream)

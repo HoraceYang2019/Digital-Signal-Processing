@@ -182,13 +182,13 @@ if __name__ == '__main__':
     time, rec_data = get_audio(play=False) # record front voice
 
     # the lengths of two data are the same 
-    com_data = gen_data*1000000000 + rec_data*1 
+    com_data = gen_data[:len(rec_data)]*1000000000 + rec_data*1 
     
     play_audio(stream, bytes(np.array(com_data, np.int32))) # 
     
     # Add.1
     fig, axs = plt.subplots(3)
-    axs[0].plot(time, gen_data, 'tab:orange')
+    axs[0].plot(time, gen_data[:len(rec_data)], 'tab:orange')
     axs[1].plot(time, rec_data, 'tab:blue')
     axs[2].plot(time, com_data, 'tab:green')
     plt.xlabel('time (sec)')
