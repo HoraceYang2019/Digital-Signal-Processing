@@ -46,7 +46,7 @@ a = np.zeros( duration * fs )
 
 num_echos = 6
 for i in range( num_echos ):
-	a[int(i * fs/4)] = 1 - i *0.2 
+	a[int(i * fs)] = 1 - i *0.2 
 
 # In[]
 y = signal.lfilter( x, b, a )
